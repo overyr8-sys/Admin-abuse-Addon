@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "Admin Abuse Addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "AdMin Abuse Addon",
+  "description": "A Addon For Admin Abuse (Clan) Mainly For 6b8t.eagler.host",
   "authors": [
-    "seasnail"
+    "Plainguy123"
   ],
   "contact": {
-    "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "sources": "https://github.com/overyr8-sys/Admin-abuse-Addon"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
