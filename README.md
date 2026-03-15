@@ -1,140 +1,88 @@
-# Meteor Addon Template
+# Admin Abuse Addon
 
-A template to allow easy usage of the Meteor Addon API.
+A Meteor Client addon made for the Admin Abuse clan. Mainly used on 6b8t and 6b6t.
 
-### How to use
+Servers: 6b8t.eagler.host and 6b6t.org
 
-#### Use GitHub Template (Recommended)
+---
 
-- Click the green `Use this template` button in the top right corner of this page.  
-  This will create a new repository with this template and a clean history.
+## Installation
 
-#### Clone Manually
+1. Install Fabric Loader from fabricmc.net
+2. Download Meteor Client and put it in your .minecraft/mods/ folder
+3. Download the latest jar from the Releases page
+4. Put the jar in your .minecraft/mods/ folder
+5. Launch Minecraft with the Fabric profile
+6. Open Meteor with Right Shift and look for the Admin Abuse category
 
-- Alternatively, clone this repository using these commands for a clean history:
-  ```bash
-  git clone --depth 1 https://github.com/MeteorDevelopment/meteor-addon-template your-addon-name
-  cd your-addon-name
-  rm -rf .git
-  git init
-  git add .
-  git commit -m "Initial commit from template"
-  ```
+---
 
-#### Development
+## Modules
 
-- Use this template to add custom modules, commands, HUDs, and other features to Meteor Client.
-- To test, run the `Minecraft Client` configuration in your IDE.
-  This will start a Minecraft client with the Meteor Client mod and your addon loaded.
-- To build, run the gradle `build` task. This will create a JAR file in the `build/libs` folder.
-    - Move the JAR file to the `mods` folder of your Minecraft installation, alongside the Meteor Client mod and run the
-      game.
+### PVP
 
-### Updating to newer Minecraft versions
+**Legit Kill Aura** - Aim assist and trigger bot. Slowly moves your aim towards players and auto clicks when youre looking at them.
 
-To update this template to a newer Minecraft version, follow these steps:
+**Legit Crystal** - Legit auto crystal. Hold end crystals, look at obsidian and hold right click. It will place and explode crystals automatically.
 
-1. Ensure a Meteor Client snapshot is available for the new Minecraft version.
-2. Update `gradle/libs.versions.toml` (the versions catalog):
-    - Set the version entries to the new versions. Common keys to update are:
-        - `versions.minecraft` - Minecraft version
-        - `versions.yarn-mappings` - Yarn mappings
-        - `versions.fabric-loader` - Fabric loader version
-        - `versions.meteor` - Meteor Client snapshot version
-    - If your addon depends on other libraries listed under the `[libraries]` section, update their versions there as
-      needed.
-    - After editing, refresh Gradle dependencies and rebuild your project in the IDE.
-3. Update Loom:
-    - Change the `loom` version in `gradle/libs.versions.toml` (the `versions.loom` entry) to the latest version
-      compatible with the new Minecraft version.
-4. Update the Gradle wrapper:
-    - Run the wrapper update command for your platform. Examples:
-      - Unix / macOS / Windows (Powershell): `./gradlew wrapper --gradle-version <version> && ./gradlew wrapper`
-      - Windows (cmd.exe): `gradlew.bat wrapper --gradle-version <version> && gradlew.bat wrapper`
-    - This updates and regenerates the Gradle Wrapper scripts (`gradlew`, `gradlew.bat`, etc.) for the specified version.
-5. Update your source code:
-    - Adjust for Minecraft or Yarn mapping changes: method names, imports, mixins, etc.
-    - Check for Meteor Client API changes that may affect your addon by comparing against the
-      [master branch](https://github.com/MeteorDevelopment/meteor-client/tree/master).
-6. Build and test:
-    - Run the gradle `build` task.
-    - Confirm the build succeeds and your addon works with the new Minecraft version.
+**Backtrack** - Delays your position packets so you appear to teleport on the enemies screen. Only kicks in when players are nearby.
 
-### Project structure
+**Auto Buff** - Throws a strength splash pot at your feet when you start fighting someone.
 
-```text
-.
-│── .github
-│   ╰── workflows
-│       │── dev_build.yml
-│       ╰── pull_request.yml
-│── gradle
-│   │── libs.versions.toml
-│   ╰── wrapper
-│       │── gradle-wrapper.jar
-│       ╰── gradle-wrapper.properties
-│── src
-│   ╰── main
-│       │── java
-│       │   ╰── com
-│       │       ╰── example
-│       │           ╰── addon
-│       │               │── commands
-│       │               │   ╰── CommandExample
-│       │               │── hud
-│       │               │   ╰── HudExample
-│       │               │── modules
-│       │               │   ╰── ModuleExample
-│       │               ╰── AddonTemplate
-│       ╰── resources
-│           │── assets
-│           │   ╰── template
-│           │       ╰── icon.png
-│           │── addon-template.mixins.json
-│           ╰── fabric.mod.json
-│── .editorconfig
-│── .gitignore
-│── build.gradle.kts
-│── gradle.properties
-│── gradlew
-│── gradlew.bat
-│── LICENSE
-│── README.md
-╰── settings.gradle.kts
+### Grief
+
+**TNT Placer** - Places TNT in a radius around you. Can auto ignite with flint and steel.
+
+### Utility
+
+**Frame Dupe** - Auto dupes items using a frame dupe plugin. Right clicks to place the item, left clicks to trigger the dupe. Has a speed slider, item whitelist, and protects the frame from being broken.
+
+**Hotbar Manager** - Keeps your hotbar stocked. You pick what item goes in each slot and it pulls them from your inventory automatically.
+
+**Auto Login** - Sends your login command when you join a server. You can set the delay and the command.
+
+**Stash Finder** - Scans chunks for stashes. Finds chests, shulkers, ender chests, spawners, barrels and more. Can send alerts to a Discord webhook or log to a file. Skips trial chambers.
+
+**Chat Logger** - Logs everything in chat to a txt file or Discord webhook with timestamps.
+
+**Advertiser** - Sends messages in chat on a timer. Supports multiple messages, random order, and the delay is in seconds.
+
+**Advanced Msg Aura** - Sends messages to nearby players automatically. Has spam mode, random order, per player messaging and a custom message list.
+
+**Auto GG** - Sends messages on kills, totem pops and deaths. You can customize what it says and it supports player name replacement.
+
+### HUD
+
+**Inventory HUD** - Shows your full inventory on screen including armor, offhand and hotbar. You can scale it and move it anywhere.
+
+---
+
+## Building from Source
+
+You need JDK 21. IntelliJ IDEA is recommended.
+
+Clone the repo:
+```
+git clone https://github.com/overyr8-sys/Admin-abuse-Addon
+cd Admin-abuse-Addon
 ```
 
-This is the default project structure. Each folder/file has a specific purpose.  
-Here is a brief explanation of the ones you might need to modify:
+Build:
+```
+.\gradlew.bat build
+```
 
-- `.github/workflows`: Contains the GitHub Actions configuration files.
-- `gradle`: Contains the Gradle wrapper files and the versions catalog.  
-  - `libs.versions.toml`: Defines version numbers for Minecraft, Loom, Meteor, and other dependencies.
-  - `wrapper`: Contains the Gradle wrapper executable files.  
-    To update the Gradle wrapper executable itself, run the wrapper update command (examples are shown above).
-- `src/main/java/com/example/addon`: Contains the main class of the addon.  
-  Here you can register your custom commands, modules, and HUDs.  
-  Edit the `getPackage` method to reflect the package of your addon.
-- `src/main/resources`: Contains the resources of the addon.
-    - `assets`: Contains the assets of the addon.  
-      You can add your own assets here, separated in subfolders.
-        - `template`: Contains the assets of the template.  
-          You can replace the `icon.png` file with your own addon icon.  
-          Also, rename this folder to reflect the name of your addon.
-    - `addon-template.mixins.json`: Contains the Mixin configuration for the addon.  
-      You can add your own mixins in the `client` array.
-    - `fabric.mod.json`: Contains the metadata of the addon.  
-      Edit the various fields to reflect the metadata of your addon.
-- `build.gradle.kts`: Contains the Gradle build script.  
-  You can manage the dependencies of the addon here.  
-  Remember to keep the `fabric-loom` version up-to-date.
-- `gradle.properties`: Contains additional build properties used by the build script
-  (for example `maven_group` and `archives_base_name`).  
-  Dependency and platform version numbers are stored in `gradle/libs.versions.toml`.
-- `LICENSE`: Contains the license of the addon.  
-  You can edit this file to change the license of your addon.
-- `README.md`: Contains the documentation of the addon.  
-  You can edit this file to reflect the documentation of your addon, and showcase its features.
+The jar will be in build/libs/
 
-## License
+---
 
-This template is available under the CC0 license. Feel free to use it for your own projects.
+## Credits
+
+Made by Plainguy123 for the Admin Abuse clan.
+Built using the Meteor Client addon template.
+
+---
+
+## Disclaimer
+
+Use at your own risk. Made for servers where this stuff is allowed.

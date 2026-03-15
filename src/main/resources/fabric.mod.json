@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "Admin Abuse Addon",
+  "id": "admin_abuse_addon",
   "version": "${version}",
-  "name": "AdMin Abuse Addon",
+  "name": "Admin Abuse Addon",
   "description": "A Addon For Admin Abuse (Clan) Mainly For 6b8t.eagler.host",
   "authors": [
     "Plainguy123"
