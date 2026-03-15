@@ -11,12 +11,14 @@ import com.example.addon.modules.Backtrack;
 import com.example.addon.modules.ChatLogger;
 import com.example.addon.modules.FastEat;
 import com.example.addon.modules.FrameDupe;
+import com.example.addon.modules.HoleSnipe;
 import com.example.addon.modules.HotbarManager;
 import com.example.addon.modules.LegitCrystal;
 import com.example.addon.modules.LegitKillAura;
 import com.example.addon.modules.MsgAura;
 import com.example.addon.modules.NewChunks;
 import com.example.addon.modules.PlayerActivity;
+import com.example.addon.modules.PlayerLogger;
 import com.example.addon.modules.StashFinder;
 import com.example.addon.modules.TNTPlacer;
 import com.example.addon.modules.XCarry;
@@ -57,6 +59,8 @@ public class AddonTemplate extends MeteorAddon {
         Modules.get().add(new NewChunks());
         Modules.get().add(new PlayerActivity());
         Modules.get().add(new FastEat());
+        Modules.get().add(new HoleSnipe());
+        Modules.get().add(new PlayerLogger());
 
         // Commands
         Commands.add(new CommandExample());
