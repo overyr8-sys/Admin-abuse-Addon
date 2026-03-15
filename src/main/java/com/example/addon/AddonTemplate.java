@@ -8,14 +8,19 @@ import com.example.addon.modules.AutoBuff;
 import com.example.addon.modules.AutoGGModule;
 import com.example.addon.modules.AutoLogin;
 import com.example.addon.modules.Backtrack;
+import com.example.addon.modules.BetterNametags;
 import com.example.addon.modules.ChatLogger;
+import com.example.addon.modules.FastEat;
 import com.example.addon.modules.FrameDupe;
 import com.example.addon.modules.HotbarManager;
 import com.example.addon.modules.LegitCrystal;
 import com.example.addon.modules.LegitKillAura;
 import com.example.addon.modules.MsgAura;
+import com.example.addon.modules.NewChunks;
+import com.example.addon.modules.PlayerActivity;
 import com.example.addon.modules.StashFinder;
 import com.example.addon.modules.TNTPlacer;
+import com.example.addon.modules.XCarry;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -49,6 +54,11 @@ public class AddonTemplate extends MeteorAddon {
         Modules.get().add(new TNTPlacer());
         Modules.get().add(new HotbarManager());
         Modules.get().add(new Backtrack());
+        Modules.get().add(new XCarry());
+        Modules.get().add(new NewChunks());
+        Modules.get().add(new PlayerActivity());
+        Modules.get().add(new FastEat());
+        Modules.get().add(new BetterNametags());
 
         // Commands
         Commands.add(new CommandExample());
