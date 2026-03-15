@@ -8,7 +8,6 @@ import com.example.addon.modules.AutoBuff;
 import com.example.addon.modules.AutoGGModule;
 import com.example.addon.modules.AutoLogin;
 import com.example.addon.modules.Backtrack;
-import com.example.addon.modules.BetterNametags;
 import com.example.addon.modules.ChatLogger;
 import com.example.addon.modules.FastEat;
 import com.example.addon.modules.FrameDupe;
@@ -58,7 +57,6 @@ public class AddonTemplate extends MeteorAddon {
         Modules.get().add(new NewChunks());
         Modules.get().add(new PlayerActivity());
         Modules.get().add(new FastEat());
-        Modules.get().add(new BetterNametags());
 
         // Commands
         Commands.add(new CommandExample());
