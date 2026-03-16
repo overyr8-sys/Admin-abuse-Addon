@@ -9,16 +9,22 @@ import com.example.addon.modules.AutoGGModule;
 import com.example.addon.modules.AutoLogin;
 import com.example.addon.modules.Backtrack;
 import com.example.addon.modules.ChatLogger;
+import com.example.addon.modules.CrystalAura;
+import com.example.addon.modules.CrystalMacro;
 import com.example.addon.modules.FastEat;
+import com.example.addon.modules.FlightAntiKick;
 import com.example.addon.modules.FrameDupe;
 import com.example.addon.modules.HoleSnipe;
 import com.example.addon.modules.HotbarManager;
+import com.example.addon.modules.LegitAutoTotem;
 import com.example.addon.modules.LegitCrystal;
 import com.example.addon.modules.LegitKillAura;
+import com.example.addon.modules.LoginCommand;
 import com.example.addon.modules.MsgAura;
 import com.example.addon.modules.NewChunks;
 import com.example.addon.modules.PlayerActivity;
 import com.example.addon.modules.PlayerLogger;
+import com.example.addon.modules.ShieldBreaker;
 import com.example.addon.modules.StashFinder;
 import com.example.addon.modules.TNTPlacer;
 import com.example.addon.modules.XCarry;
@@ -41,7 +47,6 @@ public class AddonTemplate extends MeteorAddon {
     public void onInitialize() {
         LOG.info("Initializing Admin Abuse Addon");
 
-        // Modules
         Modules.get().add(new FrameDupe());
         Modules.get().add(new ChatLogger());
         Modules.get().add(new AutoGGModule());
@@ -61,11 +66,15 @@ public class AddonTemplate extends MeteorAddon {
         Modules.get().add(new FastEat());
         Modules.get().add(new HoleSnipe());
         Modules.get().add(new PlayerLogger());
+        Modules.get().add(new LegitAutoTotem());
+        Modules.get().add(new ShieldBreaker());
+        Modules.get().add(new CrystalMacro());
+        Modules.get().add(new LoginCommand());
+        Modules.get().add(new CrystalAura());
+        Modules.get().add(new FlightAntiKick());
 
-        // Commands
         Commands.add(new CommandExample());
 
-        // HUD
         Hud.get().register(HudExample.INFO);
         Hud.get().register(InventoryHud.INFO);
     }
